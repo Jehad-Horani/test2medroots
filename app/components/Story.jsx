@@ -168,7 +168,7 @@ export default function StorySec() {
                     }}
                 >
 
-                    <div className="text-white text-lg leading-8 space-y-5">
+                    <div className="text-white text-lg leading-8 space-y-5 max-md:text-md">
                         <p>
                             <strong>MedRoots Summit 25</strong> is an international IEEE SIGHT Conference held for the first time in Jordan.
                             It highlights the country's growing role in technology, biomedical engineering, and sustainability across the MENA region.
