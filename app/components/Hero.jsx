@@ -201,7 +201,7 @@ export default function Herosec() {
                 <Link href="/TICKETS" >
                   
                         <div className="px-[57px] m-5  cursor-pointer select-none text-white border-3 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] py-2 text-[26px] rounded-[30px] transition-all duration-300 ease-in-out shadow-[2px_2px_5px_white] flex justify-center items-center gap-2 hover:scale-110 hover:text-white hover:px-[57px] hover:py-[3px] hover:text-[28px]">
-                            <h3 className="flex justify-between items-center gap-2 p-4 font-bold">
+                            <h3 className="flex justify-between items-center gap-2 p-4 font-bold max-md:text-2xl">
                                 Get your ticket
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
