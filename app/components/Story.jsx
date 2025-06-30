@@ -161,7 +161,7 @@ export default function StorySec() {
                     </h1>
                 </div>
 
-                <div className="mx-10 backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black] text-white text-[1em] w-fit space-y-5"
+                <div className="mx-2 backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black] text-white text-[1em] w-fit space-y-5"
                     style={{
                         textshadow: "2px 2px 10px black;",
 
