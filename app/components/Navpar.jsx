@@ -26,6 +26,7 @@ export default function Navbar() {
             width={100}
             height={40}
             className="object-contain"
+            data-aos="zoom-in"
           />
         </Link>
 
@@ -33,7 +34,8 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-10 text-white text-sm font-semibold tracking-wide">
           {navLinks.map((link) =>
             link.external ? (
-              <li key={link.name}>
+              <li key={link.name} data-aos="zoom-in
+">
                 <a
                   href={link.href}
                   target="_blank"
@@ -44,7 +46,8 @@ export default function Navbar() {
                 </a>
               </li>
             ) : (
-              <li key={link.name}>
+              <li key={link.name} data-aos="zoom-in
+">
                 <Link href={link.href} className="hover:text-gray-300 transition">
                   {link.name}
                 </Link>
@@ -59,6 +62,7 @@ export default function Navbar() {
           className="md:hidden text-white focus:outline-none"
           aria-label="Toggle menu"
           type="button"
+          data-aos="zoom-in"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -66,7 +70,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center md:hidden z-40 text-white text-2xl font-semibold space-y-8 px-6 min-h-screen">
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center md:hidden z-40 text-white text-2xl font-semibold space-y-8 px-6 min-h-screen" data-aos="fade-down
+">
           {navLinks.map((link) =>
             link.external ? (
               <a

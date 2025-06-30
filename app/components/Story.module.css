@@ -67,6 +67,7 @@
     position: relative;
     margin: 0.5em 0;
     width: fit-content;
+    transform: scale(0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     text-align: center;
 
@@ -79,13 +80,12 @@
     word-spacing: 10px;
     transform: translateY(30px);
     filter: drop-shadow(2px 2px 10px #ffc162);
-
     padding: 15px;
 }
 
 @media (max-width: 900px) {
     .card {
-        width: 50%;
+        width: 100%;
         height: 240px;
     }
 }

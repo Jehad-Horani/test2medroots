@@ -5,6 +5,7 @@ import Herosec from "./components/Hero";
 import StorySec from "./components/Story";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import FAQSection from "./components/FAQSection";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
 
 <Herosec /> 
 <StorySec />
-<br/><br/><br/><br/><br/>
+<FAQSection />
 
 
 
