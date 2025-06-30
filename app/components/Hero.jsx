@@ -123,22 +123,22 @@ export default function Herosec() {
                         <div className="w-full">
                             <div className="launch-time flex flex-wrap justify-center gap-[25px] border-4 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] text-white shadow-[2px_2px_10px_white] px-4 py-4 pb-6 rounded-[30px] text-center font-[Franklin_Gothic]">
 
-                                <div className="bla mx-[40px]">
+                                <div className="bla mx-[20px]">
                                     <p id="days" className="text-[40px] mb-[-14px]">{timeLeft.days}</p>
                                     <span>Days</span>
                                 </div>
 
-                                <div className="bla mx-[40px]">
+                                <div className="bla mx-[20px]">
                                     <p id="hours" className="text-[40px] mb-[-14px]">{timeLeft.hours}</p>
                                     <span>Hours</span>
                                 </div>
 
-                                <div className="bla mx-[40px]">
+                                <div className="bla mx-[20px]">
                                     <p id="minutes" className="text-[40px] mb-[-14px]">{timeLeft.minutes}</p>
                                     <span>Minutes</span>
                                 </div>
 
-                                <div className="bla mx-[40px] border-r-0">
+                                <div className="bla mx-[20px] border-r-0">
                                     <p id="seconds" className="text-[40px] mb-[-14px]">{timeLeft.seconds}</p>
                                     <span>Seconds</span>
                                 </div>

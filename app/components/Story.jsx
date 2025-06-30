@@ -10,41 +10,60 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function StorySec() {
     useEffect(() => {
-        const leftXValues = [-800, -900, -400];
-        const rightXValues = [800, 900, 400];
-        const leftRotationValues = [-30, -20, -35];
-        const rightRotationValues = [30, 20, 35];
-        const yValues = [100, -150, -400];
+        const rows = document.querySelectorAll(`.${styles.row}`);
 
-        gsap.utils.toArray(`.${styles.row}`).forEach((row, index) => {
-            const cardLeft = row.querySelector(`.${styles.card}.${styles.cardLeft}`);
-            const cardRight = row.querySelector(`.${styles.card}.${styles.cardRight}`);
 
-            if (!cardLeft || !cardRight) return;
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: row,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: true,
+
+        rows.forEach((row) => {
+            const cardLeft = row.querySelector(`.${styles.card1}`);
+            const cardRight = row.querySelector(`.${styles.card2}`);
+
+            console.log("cardLeft:", cardRight);
+
+            if (!cardRight) return;
+
+            gsap.fromTo(
+                cardRight,
+                { x: 0, y: 0, rotate: 0, opacity: 1 },
+                {
+                    x: 200,
+                    y: 100,
+                    rotate: 10,
+                    opacity: 0.5,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: row,
+                        start: "top 60%",
+                        end: "bottom 30%",
+                        scrub: true,
+                    },
                 }
-            });
+            );
 
-            tl.to(cardLeft, {
-                x: -200,
-                y: -50,
-                rotate: -10,
-                ease: "power2.out",
-            });
 
-            tl.to(cardRight, {
-                x: 200,
-                y: 50,
-                rotate: 10,
-                ease: "power2.out",
-            }, "<"); // "<" معناها يبدأ بنفس توقيت العنصر السابق
+
+            gsap.fromTo(
+                cardLeft,
+                { x: 0, y: 0, rotate: 0, opacity: 1 },
+                {
+                    x: -200,
+                    y: 100,
+                    rotate: -10,
+                    opacity: 0.5,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: row,
+                        start: "top 60%",
+                        end: "bottom 30%",
+                        scrub: true,
+                    },
+                }
+            );
+
         });
+
+
 
 
         gsap.to(`.${styles.logo}`, {
@@ -53,7 +72,7 @@ export default function StorySec() {
             ease: "power1.out",
             scrollTrigger: {
                 trigger: `.${styles.main}`,
-                start: "top 25%",
+                start: "top 35%",
             },
         });
 
@@ -64,7 +83,7 @@ export default function StorySec() {
             ease: "power1.out",
             scrollTrigger: {
                 trigger: `.${styles.main}`,
-                start: "top 25%",
+                start: "top 15%",
             },
         });
 
@@ -72,34 +91,36 @@ export default function StorySec() {
     }, []);
 
     const generateRows = () => {
-        const rows = [];
-        for (let i = 1; i <= 3; i++) {
-            rows.push(
-                <div className={styles.row} key={i}>
-                    <div className={`${styles.card} ${styles.cardLeft}`}>
-                        <img src={`/img-${2 * i - 1}.jpg`} alt="" className={styles.img} />
-                    </div>
-                    <div className={`${styles.card} ${styles.cardRight}`}>
-                        <img src={`/img-${2 * i}.jpg`} alt="" className={styles.img} />
-                    </div>
+        const imagePairs = [
+            ["/img-1.jpg", "/img-2.jpg"],
+            ["/img-3.jpg", "/img-4.jpg"]
+            // أضف المزيد هنا إذا أردت:
+            // ["/img-5.jpg", "/img-6.jpg"]
+        ];
+
+        return imagePairs.map(([leftImg, rightImg], index) => (
+            <div className={styles.row} key={index}>
+                <div className={`${styles.card1} ${styles.cardRight}`}>
+                    <img src={rightImg} alt={`Image ${2 * index + 2}`} className={styles.img} />
                 </div>
-            );
-        }
-        return rows;
+                <div className={`${styles.card2} ${styles.cardLeft}`}>
+                    <img src={leftImg} alt={`Image ${2 * index + 1}`} className={styles.img} />
+                </div>
+            </div>
+        ));
     };
 
     return (
         <ReactLenis root>
-            <section className={`${styles.main} overflow-hidden overflow-x-hidden`}> {/* Fix right scroll */}
-                <div className={`${styles.mainContent} flex items-center flex-col absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] px-20`}>
+            <section className={`${styles.main} overflow-hidden pb-35  bg-radial-[at_50%_75%] from-red-950 via-gray-950 to-black to-100% `}>
+                <div className={`${styles.mainContent} flex items-center justify-center flex-col absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] px-20`}>
                     <div className={styles.logo}>
                         <img src="/Icon logo_11zon.webp" alt="logo" className={styles.img} />
                     </div>
 
                     <div className={styles.copy}>
-                        <div className={styles.line}><p>Lorem ipsum dolor sit amet consectetur...</p></div>
-                        <div className={styles.line}><p>Lorem ipsum dolor sit amet consectetur...</p></div>
-                        <div className={styles.line}><p>Lorem ipsum dolor sit amet consectetur...</p></div>
+                        <div className={styles.line}><p>The revolution begins now</p></div>
+                      
                     </div>
                 </div>
 
