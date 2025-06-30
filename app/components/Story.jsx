@@ -92,8 +92,8 @@ export default function StorySec() {
 
     const generateRows = () => {
         const imagePairs = [
-            ["/img-1.jpg", "/img-2.jpg"],
-            ["/img-3.jpg", "/img-4.jpg"]
+            ["/img-1(1).jpg", "/img-2(2).jpg"],
+            ["/img-3(3).jpg", "/img-4(4).jpg"]
             // أضف المزيد هنا إذا أردت:
             // ["/img-5.jpg", "/img-6.jpg"]
         ];
