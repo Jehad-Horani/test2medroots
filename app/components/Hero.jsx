@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Image from "next/image";
 import styles from "./hero.module.css"
 import Link from "next/link";
+import ParticleBackground from './ParticleBackground';
+import DnaWave from './DnaWave';
 
 
 export default function Herosec() {
@@ -47,7 +49,15 @@ export default function Herosec() {
 
 
     return (
-        <div className="bg-gradient-to-b from-red-900 to-black top-0 ">
+        <div className="bg-gradient-to-b from-red-900 to-black top-0  ">
+  <DnaWave side="left" />
+  <DnaWave side="right" />
+  <div className='max-md:block hidden'>
+    <DnaWave/>
+  </div>
+
+            
+        <ParticleBackground/>
             <div className="flex justify-center items-center gap-20 px-4 py-20  ">
                 <h1 className={`${styles.medroots} font-serif text-5xl text-shadow-lg/300 ml-96 max-md:hidden mt-52 whitespace-nowrap`} 
                     style={{
