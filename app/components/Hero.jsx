@@ -49,17 +49,22 @@ export default function Herosec() {
 
 
     return (
-        <div className="bg-gradient-to-b from-red-900 to-black top-0  ">
-  <DnaWave side="left" />
-  <DnaWave side="right" />
-  <div className='max-md:block hidden'>
-    <DnaWave/>
-  </div>
+        <div className="bg-gradient-to-b from-red-900 to-black top-0 h-full">
+            <DnaWave side="left" />
+            <DnaWave side="right" />
+            <div className='max-md:block hidden'>
+                <DnaWave />
+            </div>
 
-            
-        <ParticleBackground/>
+
+            <ParticleBackground />
+           
+           <div className='relative z-10 h-[]'>
+
+          
+           
             <div className="flex justify-center items-center gap-20 px-4 py-20  ">
-                <h1 className={`${styles.medroots} font-serif text-5xl text-shadow-lg/300 ml-96 max-md:hidden mt-52 whitespace-nowrap`} 
+                <h1 className={`${styles.medroots} font-serif text-5xl text-shadow-lg/300 ml-96 max-md:hidden mt-52 whitespace-nowrap`}
                     style={{
                         textShadow: "3px 3px 3px red",
                     }}>
@@ -131,7 +136,7 @@ export default function Herosec() {
 
                     <div className="col-lg-6 text-center">
                         <div className="w-full">
-                            <div className="launch-time flex flex-wrap justify-center gap-[25px] border-4 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] text-white shadow-[2px_2px_10px_white] px-4 py-4 pb-6 rounded-[30px] text-center font-[Franklin_Gothic]">
+                            <div className="flex flex-wrap justify-center gap-[25px] border-4 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] text-white shadow-[2px_2px_10px_white] px-4 py-4 pb-6 rounded-[30px] text-center font-[Franklin_Gothic]">
 
                                 <div className="bla mx-[20px]">
                                     <p id="days" className="text-[40px] mb-[-14px]">{timeLeft.days}</p>
@@ -209,46 +214,46 @@ export default function Herosec() {
 
             <div className='flex justify-around items-center'>
                 <Link href="/TICKETS" >
-                  
-                        <div className="px-[57px] m-5  cursor-pointer select-none text-white border-3 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] py-2 text-[26px] rounded-[30px] transition-all duration-300 ease-in-out shadow-[2px_2px_5px_white] flex justify-center items-center gap-2 hover:scale-110 hover:text-white hover:px-[57px] hover:py-[3px] hover:text-[28px]">
-                            <h3 className="flex justify-between items-center gap-2 p-4 font-bold max-md:text-2xl">
-                                Get your ticket
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    version="1.1"
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 256 256"
-                                    className="fill-white"
+
+                    <div className="px-[57px] m-5  cursor-pointer select-none text-white border-3 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] py-2 text-[26px] rounded-[30px] transition-all duration-300 ease-in-out shadow-[2px_2px_5px_white] flex justify-center items-center gap-2 hover:scale-110 hover:text-white hover:px-[57px] hover:py-[3px] hover:text-[28px]">
+                        <h3 className="flex justify-between items-center gap-2 p-4 font-bold max-md:text-2xl">
+                            Get your ticket
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                version="1.1"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 256 256"
+                                className="fill-white"
+                            >
+                                <g
+                                    style={{
+                                        stroke: "none",
+                                        strokeWidth: 0,
+                                        strokeDasharray: "none",
+                                        strokeLinecap: "butt",
+                                        strokeLinejoin: "miter",
+                                        strokeMiterlimit: 10,
+                                        fill: "none",
+                                        fillRule: "nonzero",
+                                        opacity: 1,
+                                    }}
+                                    transform="translate(48.582 8.813) scale(2.29 2.29)"
                                 >
-                                    <g
-                                        style={{
-                                            stroke: "none",
-                                            strokeWidth: 0,
-                                            strokeDasharray: "none",
-                                            strokeLinecap: "butt",
-                                            strokeLinejoin: "miter",
-                                            strokeMiterlimit: 10,
-                                            fill: "none",
-                                            fillRule: "nonzero",
-                                            opacity: 1,
-                                        }}
-                                        transform="translate(48.582 8.813) scale(2.29 2.29)"
-                                    >
-                                        <path
-                                            d="M 24.25 90 c -0.896 0 -1.792 -0.342 -2.475 -1.025 c -1.367 -1.366 -1.367 -3.583 0 -4.949 L 60.8 45 L 21.775 5.975 c -1.367 -1.367 -1.367 -3.583 0 -4.95 c 1.367 -1.366 3.583 -1.366 4.95 0 l 41.5 41.5 c 1.367 1.366 1.367 3.583 0 4.949 l -41.5 41.5 C 26.042 89.658 25.146 90 24.25 90 z"
-                                            strokeLinecap="round"
-                                            fill="#fff"
-                                        />
-                                    </g>
-                                </svg>
-                            </h3>
-                        </div>
-                   
+                                    <path
+                                        d="M 24.25 90 c -0.896 0 -1.792 -0.342 -2.475 -1.025 c -1.367 -1.366 -1.367 -3.583 0 -4.949 L 60.8 45 L 21.775 5.975 c -1.367 -1.367 -1.367 -3.583 0 -4.95 c 1.367 -1.366 3.583 -1.366 4.95 0 l 41.5 41.5 c 1.367 1.366 1.367 3.583 0 4.949 l -41.5 41.5 C 26.042 89.658 25.146 90 24.25 90 z"
+                                        strokeLinecap="round"
+                                        fill="#fff"
+                                    />
+                                </g>
+                            </svg>
+                        </h3>
+                    </div>
+
                 </Link>
 
             </div>
-
+ </div>
 
 
 
