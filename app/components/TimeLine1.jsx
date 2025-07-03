@@ -155,7 +155,7 @@ export default function Day1Timeline() {
             </svg>
             <div className="absolute w-96 h-2 rounded-full bg-[#196B40] opacity-5 blur-3xl animate-pulse -z-10 top-[30%] left-[40%]" />
 
-            <div className="mt-42 max-md:mt-52"></div>
+            <div className="mt-42 max-md:mt-22"></div>
 
             <h1 style={{ fontFamily: "'Interceptor', sans-serif" }}
                 className="text-7xl max-md:text-6xl max-md:m-2  pb-12 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4">
