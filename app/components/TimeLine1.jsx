@@ -74,7 +74,7 @@ export default function Day1Timeline() {
             ease: "none",
             scrollTrigger: {
                 trigger: container,
-                start: "top 0%",
+                start: "top ",
                 end: () => `+=${timelineWidth}`,
                 scrub: true,
                 pin: true,
