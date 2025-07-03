@@ -45,7 +45,7 @@ export default function TicketSection() {
   );
 
   return (
-    <section
+    <section id="TICKETS"
       ref={sectionRef}
       className="min-h-screen py-24 px-6 md:px-20 bg-gradient-to-br from-black via-gray-900 to-gray-800 flex flex-col items-center justify-center gap-16"
     >
