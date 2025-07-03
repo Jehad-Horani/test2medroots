@@ -33,7 +33,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-4  bg-radial-[at_25%_25%] from-gray-900 from-1% to-blach text-xl  ">
+    <section className=" text-white py-16 px-4  bg-radial-[at_25%_25%] from-gray-900 from-10% to-red text-xl  ">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold mb-10 text-center text-[#f1f1f1] max-md:text-4xl backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black]">
           Frequently Asked Questions

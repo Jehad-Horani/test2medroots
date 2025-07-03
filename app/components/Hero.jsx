@@ -8,6 +8,7 @@ import ParticleBackground from './ParticleBackground';
 import DnaWave from './DnaWave';
 
 
+
 export default function Herosec() {
     const [timeLeft, setTimeLeft] = useState({
         days: '00',
@@ -50,11 +51,8 @@ export default function Herosec() {
 
     return (
         <div className="bg-gradient-to-b from-red-900 to-black top-0 h-full">
-            <DnaWave side="left" />
-            <DnaWave side="right" />
-            <div className='max-md:block hidden'>
-                <DnaWave />
-            </div>
+           
+            
 
 
             <ParticleBackground />
