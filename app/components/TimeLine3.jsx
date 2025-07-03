@@ -52,8 +52,13 @@ export default function Day3Timeline() {
     const viewportWidth = window.innerWidth;
     const scrollDistance = timelineWidth - viewportWidth + 100;
 
-    container.style.height = `${timelineWidth - 2900}px`;
-
+  if (window.innerWidth <= 768) {
+            // موبايل
+            container.style.height = `${timelineWidth - 2920}px`;
+        } else {
+            // ديسكتوب
+            container.style.height = `${timelineWidth - 3120}px`;
+        }
     gsap.to(timeline, {
       x: -scrollDistance,
       ease: "none",
