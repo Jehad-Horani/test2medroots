@@ -61,48 +61,49 @@ export default function Day1Timeline() {
         const scrollDistance = timelineWidth - viewportWidth + 100;
 
         // ضبط حجم الحاوية ليكون طولها يساوي مسافة السحب لعمل سكروول عمودي
-        if (window.innerWidth <= 768) {
-            // موبايل
-            container.style.height = `${timelineWidth - 2620}px`;
-        } else {
-            // ديسكتوب
-            container.style.height = `${timelineWidth - 3120}px`;
-        }
-        // تحريك الـ timeline أفقيًا مع السكروول العمودي
-        gsap.to(timeline, {
-            x: -scrollDistance,
-            ease: "none",
-            scrollTrigger: {
-                trigger: container,
-                start: "top ",
-                end: () => `+=${timelineWidth}`,
-                scrub: true,
-                pin: true,
-                anticipatePin: 1,
-                
-            },
-        });
+        let startValue;
+  if (viewportWidth <= 768) {
+    container.style.height = `${timelineWidth - 2620}px`;
+    startValue = "top center+=200"; // للموبايل
+  } else {
+    container.style.height = `${timelineWidth - 3120}px`;
+    startValue = "top"; // للكمبيوتر
+  }
 
-        // تأثير ظهور النقاط والأحداث تدريجيًا
-        events.forEach((eventEl, i) => {
-            gsap.fromTo(
-                eventEl,
-                { opacity: 0, y: 20 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    ease: "power2.out",
-                    duration: 0.5,
-                    scrollTrigger: {
-                        trigger: eventEl,
-                        start: "top center+=600",
-                        end: "top center",
-                        toggleActions: "play none none reverse",
-                    },
-                    delay: i * 0.1,
-                }
-            );
-        });
+  gsap.to(timeline, {
+    x: -scrollDistance,
+    ease: "none",
+    scrollTrigger: {
+      trigger: container,
+      start: "top top",
+      end: () => `+=${timelineWidth}`,
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+    },
+  });
+
+  events.forEach((eventEl, i) => {
+    if (!eventEl) return;
+
+    gsap.fromTo(
+      eventEl,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        ease: "power2.out",
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: eventEl,
+          start: startValue,
+          end: "top center",
+          toggleActions: "play none none reverse",
+        },
+        delay: i * 0.1,
+      }
+    );
+  });
 
 
         return () => {
@@ -113,7 +114,7 @@ export default function Day1Timeline() {
     return (
         <section
             ref={containerRef}
-            className="relative w-full h-fit  overflow-hidden bg-gray-950 text-white text-center"
+            className="relative w-full h-full  overflow-hidden bg-gray-950 text-white text-center"
             style={{
                 fontFamily: "'sans', sans-serif",
                 background: "radial-gradient(ellipse at center, #111827 0%, #0f172a 100%)",
