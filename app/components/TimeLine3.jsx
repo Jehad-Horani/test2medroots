@@ -57,7 +57,7 @@ export default function Day3Timeline() {
             container.style.height = `${timelineWidth - 2620}px`;
         } else {
             // ديسكتوب
-            container.style.height = `${timelineWidth - 2720}px`;
+            container.style.height = `${timelineWidth - 3120}px`;
         }
     gsap.to(timeline, {
       x: -scrollDistance,
@@ -69,6 +69,7 @@ export default function Day3Timeline() {
         scrub: true,
         pin: true,
         anticipatePin: 1,
+        
       },
     });
 
@@ -100,7 +101,7 @@ export default function Day3Timeline() {
   return (
     <section
       ref={containerRef}
-      className=" w-full overflow-hidden text-white text-center"
+      className=" w-full  text-white text-center"
       style={{
         fontFamily: "'Interceptor', sans-serif",
         background:
@@ -109,7 +110,7 @@ export default function Day3Timeline() {
     >
       {/* خلفية خطوط ونجوم */}
       <svg
-        className="absolute top-0 left-0 w-full h-full opacity-10 z-0 pointer-events-none"
+        className="absolute top-0 left-0 w-full h-fIT opacity-10 z-0 pointer-events-none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -143,12 +144,10 @@ export default function Day3Timeline() {
       </svg>
 
       {/* ألوان خلفية ناعمة */}
-      <div className="absolute w-[600px] h-[600px] rounded-full bg-[#f4a261] opacity-10 blur-[150px] animate-pulse -z-10 top-[50%] left-[10%]" />
-      <div className="absolute w-[400px] h-[400px] rounded-full bg-[#e76f51] opacity-10 blur-[100px] animate-pulse -z-10 top-[70%] left-[60%]" />
-
+      
       {/* عنوان اليوم */}
-      <div className="mt-32 mb-22">
-        <h2 className="text-6xl max-md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#e76f51] via-[#f4a261] to-[#f1faee] tracking-wide drop-shadow-lg">
+      <div className="mt-32 mb-22 ">
+        <h2 className="text-6xl max-md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#e76f51] via-[#f4a261] to-[#f1faee]  drop-shadow-lg">
           Day 3 — Wadi Rum & Petra Adventure
         </h2>
       </div>

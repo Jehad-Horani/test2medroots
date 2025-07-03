@@ -63,7 +63,7 @@ export default function Day1Timeline() {
         // ضبط حجم الحاوية ليكون طولها يساوي مسافة السحب لعمل سكروول عمودي
         if (window.innerWidth <= 768) {
             // موبايل
-            container.style.height = `${timelineWidth - 3120}px`;
+            container.style.height = `${timelineWidth - 2620}px`;
         } else {
             // ديسكتوب
             container.style.height = `${timelineWidth - 3120}px`;
@@ -79,6 +79,7 @@ export default function Day1Timeline() {
                 scrub: true,
                 pin: true,
                 anticipatePin: 1,
+                
             },
         });
 
@@ -169,11 +170,11 @@ export default function Day1Timeline() {
 
             <div
                 ref={timelineRef}
-                className="flex gap-50 max-md:gap-20 px-12 items-center"
+                className="flex gap-50 pl-50 max-md:gap-20 px-12 items-center"
                 style={{ whiteSpace: "nowrap", willChange: "transform" }}
             >
                 {/* الخط الأخضر الأساسي */}
-                <div className="absolute top-1/7 ml-40 left-0 w-[3590px] max-md:w-[2400px] max-sm:w-[2000px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
+                <div className="absolute ml-82 top-1/7  left-0 w-[3590px] max-md:w-[2400px] max-sm:w-[2000px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
 
                 {day1Events.map((event, i) => (
                     <div

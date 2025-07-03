@@ -59,6 +59,7 @@ export default function Day2Timeline() {
                 scrub: true,
                 pin: true,
                 anticipatePin: 1,
+                
             },
         });
 
