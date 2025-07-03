@@ -7,6 +7,7 @@ import ScrollSpy from "./components/ScrollSpy"
 import FAQSection from "./components/FAQSection";
 import ConferenceAgenda from "./components/agenda";
 import Footer from "./components/Footer";
+import TicketSection from "./components/TicketSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
 <Herosec /> 
 <StorySec />
 <ConferenceAgenda/>
+<TicketSection/>
 <FAQSection />
 <Footer/>
 

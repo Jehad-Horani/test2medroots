@@ -19,7 +19,7 @@ export default function Footer() {
           <h2 className="text-lg font-semibold text-[#00ffcc] mb-2">Explore</h2>
           <a href="#story" className="text-gray-300 hover:text-white transition">About</a>
           <a href="#agenda" className="text-gray-300 hover:text-white transition">Schedule</a>
-          <a href="#contact" className="text-gray-300 hover:text-white transition">Tickets</a>
+          <a href="#TICKETS" className="text-gray-300 hover:text-white transition">Tickets</a>
           <a href="#faq" className="text-gray-300 hover:text-white transition">FAQ</a>
 
         </div>
