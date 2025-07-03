@@ -57,7 +57,7 @@ export default function Day3Timeline() {
             container.style.height = `${timelineWidth - 2620}px`;
         } else {
             // ديسكتوب
-            container.style.height = `${timelineWidth - 3120}px`;
+            container.style.height = `${timelineWidth - 2720}px`;
         }
     gsap.to(timeline, {
       x: -scrollDistance,
