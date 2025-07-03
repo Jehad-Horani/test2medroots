@@ -95,7 +95,7 @@ export default function Day1Timeline() {
                     duration: 0.5,
                     scrollTrigger: {
                         trigger: eventEl,
-                        start: "top center+=300",
+                        start: "top center+=600",
                         end: "top center",
                         toggleActions: "play none none reverse",
                     },
