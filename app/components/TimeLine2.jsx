@@ -117,11 +117,11 @@ export default function Day2Timeline() {
 
 
             <h2         style={{  fontFamily: "'Interceptor', sans-serif"}}
- className="text-center text-6xl max-md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#196B40] via-white to-[#BE1E2D] to-75% from-25% tracking-wide my-16 drop-shadow-lg">
+ className="text-center text-6xl mb-35 mt-60 max-md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#196B40] via-white to-[#BE1E2D] to-75% from-25% tracking-wide my-16 drop-shadow-lg">
                 Day 2 — Mon, 15th Sep.
             </h2>
 
-            <div ref={timelineRef} className="flex gap-50 max-md:gap-30 px-16 mx-20 items-center" style={{ whiteSpace: "nowrap", willChange: "transform" }}>
+            <div ref={timelineRef} className="flex gap-50 max-md:gap-30 px-16 mx-20 ml-15 items-center" style={{ whiteSpace: "nowrap", willChange: "transform" }}>
                 <div className="absolute top-1/7 ml-40 left-0 w-[4010px] max-md:w-[3090px] max-sm:w-[2600px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
                 {day2Events.map((event, i) => (
                     <div key={i} ref={addEventRef} className="relative z-10 inline-block w-60" style={{ textAlign: "center" }}>

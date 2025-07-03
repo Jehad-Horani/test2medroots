@@ -101,7 +101,7 @@ export default function Day3Timeline() {
   return (
     <section
       ref={containerRef}
-      className=" w-full  text-white text-center"
+      className=" w-full text-white text-center"
       style={{
         fontFamily: "'Interceptor', sans-serif",
         background:
@@ -110,7 +110,7 @@ export default function Day3Timeline() {
     >
       {/* خلفية خطوط ونجوم */}
       <svg
-        className="absolute top-0 left-0 w-full h-fIT opacity-10 z-0 pointer-events-none"
+        className="absolute top-0 left-0 w-full h-fit opacity-10 z-0 pointer-events-none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -147,7 +147,7 @@ export default function Day3Timeline() {
       
       {/* عنوان اليوم */}
       <div className="mt-32 mb-22 ">
-        <h2 className="text-6xl max-md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#e76f51] via-[#f4a261] to-[#f1faee]  drop-shadow-lg">
+        <h2 className="text-6xl mt-20 max-md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#e76f51] via-[#f4a261] to-[#f1faee]  drop-shadow-lg">
           Day 3 — Wadi Rum & Petra Adventure
         </h2>
       </div>
