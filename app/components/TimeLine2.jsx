@@ -121,7 +121,7 @@ export default function Day2Timeline() {
             </h2>
 
             <div ref={timelineRef} className="flex gap-50 max-md:gap-30 px-16 mx-20 items-center" style={{ whiteSpace: "nowrap", willChange: "transform" }}>
-                <div className="absolute top-1/7 ml-40 left-0 w-[4010px] max-md:w-[3090px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
+                <div className="absolute top-1/7 ml-40 left-0 w-[4010px] max-md:w-[3090px] max-sm:w-[2600px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
                 {day2Events.map((event, i) => (
                     <div key={i} ref={addEventRef} className="relative z-10 inline-block w-60" style={{ textAlign: "center" }}>
                         <div className="mx-auto mb-4 w-7 h-7 rounded-full bg-[#BE1E2D] shadow-[0_0_10px_#BE1E2D]" />

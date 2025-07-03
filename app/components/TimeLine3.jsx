@@ -54,7 +54,7 @@ export default function Day3Timeline() {
 
   if (window.innerWidth <= 768) {
             // موبايل
-            container.style.height = `${timelineWidth - 2920}px`;
+            container.style.height = `${timelineWidth - 2620}px`;
         } else {
             // ديسكتوب
             container.style.height = `${timelineWidth - 3120}px`;
@@ -159,7 +159,7 @@ export default function Day3Timeline() {
         className="flex font-sans gap-52 px-12 items-center"
         style={{ whiteSpace: "nowrap", willChange: "transform" }}
       >
-        <div className="absolute top-1/7 ml-40 left-0 w-[2990px] max-md:w-[3100px] h-2 bg-[#f4a261] -translate-y-1/2 z-0 rounded" />
+        <div className="absolute top-1/7 ml-40 left-0 w-[2990px] max-sm:w-[2800px] max-md:w-[3100px] h-2 bg-[#f4a261] -translate-y-1/2 z-0 rounded" />
 
         {day3Events.map((event, i) => (
           <div

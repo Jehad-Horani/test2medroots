@@ -156,13 +156,13 @@ export default function Day1Timeline() {
 
             <div className="mt-42 max-md:mt-52"></div>
 
-            <h1         style={{  fontFamily: "'Interceptor', sans-serif"}}
- className="text-7xl max-md:text-6xl max-md:m-2  pb-12 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4">
+            <h1 style={{ fontFamily: "'Interceptor', sans-serif" }}
+                className="text-7xl max-md:text-6xl max-md:m-2  pb-12 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4">
                 Conference Agenda
             </h1>
 
-            <h2         style={{  fontFamily: "'Interceptor', sans-serif"}}
- className="text-center text-6xl max-md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#196B40] via-white to-[#BE1E2D] to-75% from-25% tracking-wide my-16 drop-shadow-lg">
+            <h2 style={{ fontFamily: "'Interceptor', sans-serif" }}
+                className="text-center text-6xl max-md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#196B40] via-white to-[#BE1E2D] to-75% from-25% tracking-wide my-16 drop-shadow-lg">
                 Day 1 — Sun, 14th Sep.
             </h2>
 
@@ -173,7 +173,7 @@ export default function Day1Timeline() {
                 style={{ whiteSpace: "nowrap", willChange: "transform" }}
             >
                 {/* الخط الأخضر الأساسي */}
-                <div className="absolute top-1/7 ml-40 left-0 w-[3590px] max-md:w-[2400px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
+                <div className="absolute top-1/7 ml-40 left-0 w-[3590px] max-md:w-[2400px] max-sm:w-[2000px] h-2 bg-[#196B40] -translate-y-1/2 z-0 rounded" />
 
                 {day1Events.map((event, i) => (
                     <div
