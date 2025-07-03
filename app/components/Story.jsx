@@ -8,11 +8,28 @@ import styles from "./Story.module.css";
 import Image from "next/image";
 import ScrollRevealContent from "./ScrollRevealContent";
 import MedRootsScroll from "./MedRootsScroll";
+import { useMemo } from "react";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function StorySec() {
+
+    const lines = useMemo(() => {
+        return Array.from({ length: 10 }, () => ({
+            x1: `${Math.random() * 100}%`,
+            x2: `${Math.random() * 100}%`,
+        }));
+    }, []);
+
+    const stars = useMemo(() => {
+        return Array.from({ length: 40 }, () => ({
+            cx: `${Math.random() * 100}%`,
+            cy: `${Math.random() * 100}%`,
+        }));
+    }, []);
+
     useEffect(() => {
         const rows = document.querySelectorAll(`.${styles.row}`);
 
@@ -123,15 +140,53 @@ export default function StorySec() {
 
 
     return (
-        <ReactLenis root>
-            <section className={`relative flex-col flex items-center justify-center overflow-hidden pb-35 bg-radial-[at_50%_50%] from-red-950 via-gray-950 to-black to-100% `}>
+        <section id="story">
+        <ReactLenis root >
+            <section style={{ fontFamily: "'Interceptor', sans-serif" }}
+                className={`relative flex-col flex items-center justify-center overflow-hidden pb-35 bg-radial-[at_50%_50%] from-red-950 via-gray-900 to-gray-950 to-100% `}>
+
+                <svg
+                    className="absolute top-0 left-0 w-full h-full opacity-10 z-0 pointer-events-none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <defs>
+                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stopColor="#00ffcc" />
+                            <stop offset="100%" stopColor="#196B40" />
+                        </linearGradient>
+                    </defs>
+
+                    {lines.map((line, i) => (
+                        <line
+                            key={`line-${i}`}
+                            x1={line.x1}
+                            y1="0"
+                            x2={line.x2}
+                            y2="100%"
+                            stroke="url(#lineGradient)"
+                            strokeWidth="0.5"
+                            strokeDasharray="5 10"
+                        />
+                    ))}
+
+                    {stars.map((star, i) => (
+                        <circle
+                            key={`star-${i}`}
+                            cx={star.cx}
+                            cy={star.cy}
+                            r="1.5"
+                            fill="#00ffcc"
+                        />
+                    ))}
+                </svg>
+
                 <div className={`${styles.mainContent} flex items-center justify-center flex-col absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] px-20`}>
                     <div className={styles.logo}>
                         <img src="/Icon logo_11zon.webp" alt="logo" className={`w-[100%] h-[100%] object-cover`} />
                     </div>
 
                     <div className={styles.copy}>
-                        <div className={`${styles.line} max-md:text-5xl pb-7 font-sans`}><p>The revolution begins now</p></div>
+                        <div className={`${styles.line} max-md:text-5xl pb-7`}><p>The revolution begins now</p></div>
 
                     </div>
                 </div>
@@ -145,27 +200,11 @@ export default function StorySec() {
 
 
             </section>
-            <section className=" p-[10px] flex flex-col justify-around items-center gap-20 bg-radial-[at_50%_50%] from-black via-gray-900 text-xl to-black to-100% ">
+            <section         style={{  fontFamily: "'Interceptor', sans-serif"}}
+ className=" bg-gray-900 flex flex-col justify-between   items-center gap-20  ">
 
 
-                {/* <div className="p-10 backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black] text-white text-[3em] w-fit"
-                        style={{
-                            textshadow: "2px 2px 10px black;",
 
-                        }}
-                        data-aos="fade-up"
-                    >
-                        <h1
-                            className="text-center text-7xl max-md:text-5xl font-bold aos-init aos-animate"
-
-                        >
-                            What is{" "}
-                            <span className="text-[#BE1E2D] font-[Interceptor]">Med</span>
-                            <span className="text-[#196B40] font-[Interceptor]">
-                                Roots<sub>25</sub>?
-                            </span>
-                        </h1>
-                    </div> */}
                 <MedRootsScroll />
 
                 <div className="h-[590vh] max-sm:h-[150vh] max-lg:h-[200vh]"></div>
@@ -184,5 +223,6 @@ export default function StorySec() {
 
             </section>
         </ReactLenis>
+        </section>
     );
 }

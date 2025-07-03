@@ -50,7 +50,9 @@ export default function Herosec() {
 
 
     return (
-        <div className="bg-gradient-to-b from-red-900 to-black top-0 h-full">
+        <div id='home' className="bg-gradient-to-b from-red-900 to-gray-950 to-80% top-0 h-full" 
+        style={{  fontFamily: "'Interceptor', sans-serif"}}
+        >
            
             
 
@@ -61,12 +63,12 @@ export default function Herosec() {
 
           
            
-            <div className="flex justify-center items-center gap-20 px-4 py-20  ">
-                <h1 className={`${styles.medroots} font-serif text-5xl text-shadow-lg/300 ml-96 max-md:hidden mt-52 whitespace-nowrap`}
+            <div className="flex justify-center items-center gap-20 px-4 py-18 ">
+                <h1 className={`${styles.medroots}  text-5xl text-shadow-lg/300 ml-88 max-md:hidden mt-56 whitespace-nowrap`}
                     style={{
                         textShadow: "3px 3px 3px red",
                     }}>
-                    MedRoots
+                    MEDROOTS
                 </h1>
 
                 <Image
@@ -80,7 +82,7 @@ export default function Herosec() {
                     }}
                 />
 
-                <h1 className={`${styles.summit} font-serif text-5xl mr-80  max-md:hidden  mt-56 whitespace-nowrap`}
+                <h1 className={`${styles.summit}  text-5xl mr-80  max-md:hidden  mt-56 whitespace-nowrap`}
                     style={{
                         textShadow: "3px 3px 3px green",
                     }}>
@@ -88,7 +90,7 @@ export default function Herosec() {
                 </h1>
             </div>
 
-            <h1 className="text-5xl pt-7 pb-3 text-center font-bold font-mono">Conference Day</h1>
+            <h1 className="text-5xl pt-7 pb-3 text-center font-bold ">Conference Day</h1>
 
             <div className="flex justify-around flex-wrap-reverse max-md:gap-20 items-center pt-10 pb-6">
                 <div className="flex items-center">
@@ -134,7 +136,7 @@ export default function Herosec() {
 
                     <div className="col-lg-6 text-center">
                         <div className="w-full">
-                            <div className="flex flex-wrap justify-center gap-[25px] border-4 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] text-white shadow-[2px_2px_10px_white] px-4 py-4 pb-6 rounded-[30px] text-center font-[Franklin_Gothic]">
+                            <div className="flex flex-wrap justify-center gap-[25px] border-4 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] text-white shadow-[2px_2px_10px_white] px-4 py-4 pb-6 rounded-[30px] text-center">
 
                                 <div className="bla mx-[20px]">
                                     <p id="days" className="text-[40px] mb-[-14px]">{timeLeft.days}</p>

@@ -6,15 +6,18 @@ import StorySec from "./components/Story";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import FAQSection from "./components/FAQSection";
+import ConferenceAgenda from "./components/agenda";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div >
+    <div className="bg-gray-900" >
 
 <Herosec /> 
 <StorySec />
+<ConferenceAgenda/>
 <FAQSection />
-
+<Footer/>
 
 
 

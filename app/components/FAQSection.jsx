@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
@@ -26,6 +26,22 @@ const faqs = [
 ];
 
 export default function FAQSection() {
+  const lines = useMemo(
+    () =>
+      Array.from({ length: 10 }, () => ({
+        x1: `${Math.random() * 100}%`,
+        x2: `${Math.random() * 100}%`,
+      })),
+    []
+  );
+  const stars = useMemo(
+    () =>
+      Array.from({ length: 40 }, () => ({
+        cx: `${Math.random() * 100}%`,
+        cy: `${Math.random() * 100}%`,
+      })),
+    []
+  );
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (index) => {
@@ -33,16 +49,49 @@ export default function FAQSection() {
   };
 
   return (
-    <section className=" text-white py-16 px-4  bg-radial-[at_25%_25%] from-gray-900 from-10% to-red text-xl  ">
-      <div className="max-w-4xl mx-auto">
+    <section id="faq" className="relative text-white  p-20 px-0 text-xl">
+      <svg
+        className="absolute top-0 left-0 w-full h-full opacity-10 z-0 pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#00ffcc" />
+            <stop offset="100%" stopColor="#196B40" />
+          </linearGradient>
+        </defs>
+        {lines.map((line, i) => (
+          <line
+            key={`line-${i}`}
+            x1={line.x1}
+            y1="0"
+            x2={line.x2}
+            y2="100%"
+            stroke="url(#lineGradient)"
+            strokeWidth="0.5"
+            strokeDasharray="5 10"
+          />
+        ))}
+        {stars.map((star, i) => (
+          <circle
+            key={`star-${i}`}
+            cx={star.cx}
+            cy={star.cy}
+            r="1.5"
+            fill="#00ffcc"
+          />
+        ))}
+      </svg>
+
+      <div className="relative max-w-4xl mx-auto  z-10">
         <h1 className="text-5xl font-bold mb-10 text-center text-[#f1f1f1] max-md:text-4xl backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black]">
           Frequently Asked Questions
         </h1>
-        <div className="space-y-5 pt-10 backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black]">
+        <div className="space-y-5 pt-4 backdrop-blur-3xl rounded-[25px] px-[30px] py-[20px] shadow-[2px_2px_10px_black]">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-700 rounded-xl bg-gray-900 transition-all duration-200"
+              className="border border-gray-700 rounded-xl transition-all duration-200"
             >
               <button
                 onClick={() => toggle(index)}
@@ -58,7 +107,9 @@ export default function FAQSection() {
 
               <div
                 className={`px-5 overflow-hidden transition-all duration-1000 ease-in-out ${
-                  openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                  openIndex === index
+                    ? "max-h-40 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 <p className="text-gray-300 py-2">{faq.answer}</p>

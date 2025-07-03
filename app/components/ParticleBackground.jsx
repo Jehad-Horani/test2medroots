@@ -21,7 +21,7 @@ export default function ParticleBackground() {
           fpsLimit: 60,
           detectRetina: true,
           particles: {
-            number: { value: 100, density: { enable: true, area: 900 }},
+            number: { value: 110, density: { enable: true, area: 900 }},
             color: { value: ["#BE1E2D", "#196B40"] },
             shape: { type: "circle" },
             opacity: { value: 0.4, random: true, anim: { enable: true, speed: 0.6, opacity_min: 0.1, sync: false }},

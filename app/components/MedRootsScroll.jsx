@@ -132,17 +132,19 @@ export default function MedRootsScroll() {
             {/* النص والمحتوى المتحرك */}
             <div
                 ref={trackRef}
-                className="flex h-full items-center z-10 relative gap-10 max-sm:gap-96"
-                style={{ willChange: "transform" }}
+                className="flex h-full items-center z-10 relative gap-0 max-md:gap-96"
+                style={{ willChange: "transform" ,
+        fontFamily: "'Interceptor', sans-serif"
+                }}
             >
                 <section className="flex-shrink-0 w-screen h-full flex flex-col items-center justify-center">
-                    <h1 className="text-[15vw] max-md:text-[35vw] font-bold leading-none mb-4 whitespace-nowrap">
+                    <h1 className="text-[15vw] max-md:text-[35vw] font-bold leading-none mb-0 pr-50 whitespace-nowrap">
                         What is
                     </h1>
                 </section>
 
                 <section className="flex-shrink-0 w-screen h-full gap-10 flex flex-col items-center justify-center">
-                    <h1 className="text-[15vw] max-md:text-[35vw] font-extrabold font-serif leading-none text-center flex flex-row items-center justify-center">
+                    <h1 className="text-[15vw] max-md:text-[35vw] font-extrabold leading-none text-center flex flex-row items-center justify-center">
                         <span className="text-[#BE1E2D] drop-shadow-[0_0_10px_#BE1E2D]">Med</span>
                         <span
                             ref={roots25Ref}

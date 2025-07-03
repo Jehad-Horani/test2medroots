@@ -9,17 +9,20 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'HOME', href: '/' },
+    { name: 'HOME', href: '#home' },
+    { name: 'Our Story', href: '#story' },
+    { name: 'AGENDA', href: '#agenda' },
+    { name: 'TICKETS', href: '#TICKETS' },
+    { name: 'FAQ', href: '#faq' },
     { name: 'IEEE SIGHT', href: 'https://sight.ieee.org/about-ieee-sight/', external: true },
-    { name: 'AGENDA', href: '/AGENDA' },
-    { name: 'TICKETS', href: '/TICKETS' },
+    { name: 'Contact', href: '#footer' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xs shadow-2xl rounded-b-3xl  py-3 mx-0.5">
       <nav className="max-w-screen-xl mx-auto flex items-center justify-between h-16 px-4">
         {/* Logo */}
-        <Link href="/">
+        <Link href="#home">
           <Image
             src="/logo-w.webp"
             alt="MEDROOTS Logo"

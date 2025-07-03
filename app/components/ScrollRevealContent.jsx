@@ -22,7 +22,6 @@ export default function ScrollRevealContent() {
     elements.forEach((el) => {
       const full = el.dataset.fulltext;
       el.textContent = "";
-      el.classList.add("text-glow");
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -77,13 +76,13 @@ export default function ScrollRevealContent() {
       {/* النصوص */}
       <div
         ref={sectionRef}
-        className="relative z-10 text-white px-4 max-w-7xl mx-auto space-y-5 leading-relaxed"
+        className="relative z-10 font-sans text-xl text-white px-4 max-w-7xl mx-auto space-y-5 leading-relaxed"
       >
-        <div className="relative border-l-4 border-gradient-to-b from-red-700 to-green-600 pl-4">
+        <div className="relative border-l-4 pl-4">
           <p data-fulltext="MedRoots Summit 25 is an international IEEE SIGHT Conference held for the first time in Jordan. It highlights the country's growing role in technology, biomedical engineering, and sustainability across the MENA region."></p>
         </div>
 
-        <div className="relative border-l-4 border-gradient-to-b from-red-700 to-green-600 pl-4">
+        <div className="relative border-l-4 pl-4">
           <p data-fulltext="Under the theme “Empowering the Future through Environmental Development, EcoGenomics, AI, Innovation, Medical Fields, and Engineering”."></p>
         </div>
 
@@ -94,7 +93,7 @@ export default function ScrollRevealContent() {
           <li data-fulltext="Exhibitions on AI, environment, and healthcare"></li>
         </ul>
 
-        <div className="relative border-l-4 border-gradient-to-b from-red-700 to-green-600 pl-4">
+        <div className="relative border-l-4 pl-4">
           <p data-fulltext="MedRoots 25 marks a turning point in Jordan’s biomedical engineering journey, driving research, youth innovation, and regional leadership in science and technology."></p>
         </div>
       </div>
