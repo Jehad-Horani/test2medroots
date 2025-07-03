@@ -23,7 +23,9 @@ body {
   overflow-y: auto; /* اسمح بالسكرول */
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .text-glow {
   text-shadow: 0 0 8px rgba(0, 255, 204, 0.7);
