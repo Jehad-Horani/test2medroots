@@ -22,7 +22,15 @@ export default function MedRootsScroll() {
 
         const totalWidth = track.scrollWidth;
         const viewportWidth = window.innerWidth;
-        const scrollDistance = totalWidth + viewportWidth;
+
+         const scrollDistance = totalWidth + viewportWidth;
+         let scrollDistancevalue;
+  if (viewportWidth <= 768) {
+  scrollDistancevalue=scrollDistance - 600
+  } else {
+   scrollDistancevalue=scrollDistance 
+
+  }
 
         // نبدأ العنصر خارج يمين الشاشة (full width)
         gsap.set(track, { x: viewportWidth, opacity: 1 });
@@ -34,7 +42,7 @@ export default function MedRootsScroll() {
             scrollTrigger: {
                 trigger: container,
                 start: "top top",
-                end: `+=${scrollDistance}`,
+                end: `+=${scrollDistancevalue}`,
                 scrub: 1,
                 pin: true,
                 anticipatePin: 1,

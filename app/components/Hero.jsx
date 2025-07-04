@@ -50,16 +50,16 @@ export default function Herosec() {
 
 
     return (
-        <div id='home' className="bg-gradient-to-b from-red-900 to-gray-950 to-80% top-0 h-full" 
+        <div id='home' className="bg-gradient-to-b from-red-900 to-gray-950 to-90% top-0 h-full" 
         style={{  fontFamily: "'Interceptor', sans-serif"}}
         >
            
             
 
 
-            <ParticleBackground />
            
-           <div className='relative z-10 h-[]'>
+           <div className='relative z-10'>
+            <ParticleBackground />
 
           
            
@@ -89,11 +89,13 @@ export default function Herosec() {
                     SUMMIT 25
                 </h1>
             </div>
+ <div className="flex justify-center items-center ">
 
             <h1 className="text-5xl pt-7 pb-3 text-center font-bold ">Conference Day</h1>
+</div>
 
-            <div className="flex justify-around flex-wrap-reverse max-md:gap-20 items-center pt-10 pb-6">
-                <div className="flex items-center">
+            <div className="flex transform-3d justify-around flex-wrap-reverse max-lg:gap-20 items-center pt-10 pb-6">
+                <div className="flex justify-around items-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         version="1.1"
@@ -204,7 +206,7 @@ export default function Herosec() {
                             rel="noopener noreferrer"
                             className="text-white text-xl ml-2 inline-block hover:text-red-300 transition font-bold"
                         >
-                            Four Seasons Hotel Amman
+                           {"          jehad h "} Hotel in Amman
                         </a>
                     </div>
                 </div>
@@ -213,7 +215,7 @@ export default function Herosec() {
             </div>
 
             <div className='flex justify-around items-center'>
-                <Link href="/TICKETS" >
+                <Link href="#TICKETS" >
 
                     <div className="px-[57px] m-5  cursor-pointer select-none text-white border-3 border-t-[#196B40] border-l-[#196B40] border-r-[#BE1E2D] border-b-[#BE1E2D] backdrop-blur-[50px] py-2 text-[26px] rounded-[30px] transition-all duration-300 ease-in-out shadow-[2px_2px_5px_white] flex justify-center items-center gap-2 hover:scale-110 hover:text-white hover:px-[57px] hover:py-[3px] hover:text-[28px]">
                         <h3 className="flex justify-between items-center gap-2 p-4 font-bold max-md:text-2xl">

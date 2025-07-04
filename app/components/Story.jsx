@@ -16,19 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function StorySec() {
 
-    const lines = useMemo(() => {
-        return Array.from({ length: 10 }, () => ({
-            x1: `${Math.random() * 100}%`,
-            x2: `${Math.random() * 100}%`,
-        }));
-    }, []);
 
-    const stars = useMemo(() => {
-        return Array.from({ length: 40 }, () => ({
-            cx: `${Math.random() * 100}%`,
-            cy: `${Math.random() * 100}%`,
-        }));
-    }, []);
 
     useEffect(() => {
         const rows = document.querySelectorAll(`.${styles.row}`);
@@ -140,45 +128,12 @@ export default function StorySec() {
 
 
     return (
-        <section id="story">
+        <section id="story" className="relative">
         <ReactLenis root >
             <section style={{ fontFamily: "'Interceptor', sans-serif" }}
                 className={`relative flex-col flex items-center justify-center overflow-hidden pb-35 bg-radial-[at_50%_50%] from-red-950 via-gray-900 to-gray-950 to-100% `}>
 
-                <svg
-                    className="absolute top-0 left-0 w-full h-full opacity-10 z-0 pointer-events-none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <defs>
-                        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#00ffcc" />
-                            <stop offset="100%" stopColor="#196B40" />
-                        </linearGradient>
-                    </defs>
-
-                    {lines.map((line, i) => (
-                        <line
-                            key={`line-${i}`}
-                            x1={line.x1}
-                            y1="0"
-                            x2={line.x2}
-                            y2="100%"
-                            stroke="url(#lineGradient)"
-                            strokeWidth="0.5"
-                            strokeDasharray="5 10"
-                        />
-                    ))}
-
-                    {stars.map((star, i) => (
-                        <circle
-                            key={`star-${i}`}
-                            cx={star.cx}
-                            cy={star.cy}
-                            r="1.5"
-                            fill="#00ffcc"
-                        />
-                    ))}
-                </svg>
+             
 
                 <div className={`${styles.mainContent} flex items-center justify-center flex-col absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] px-20`}>
                     <div className={styles.logo}>

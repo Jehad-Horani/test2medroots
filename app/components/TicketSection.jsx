@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck, FaCrown, FaUserGraduate } from "react-icons/fa";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,83 +12,159 @@ export default function TicketSection() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const el = sectionRef.current;
     gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 100 },
+      el.querySelectorAll(".ticket"),
+      { y: 100, opacity: 0 },
       {
-        opacity: 1,
         y: 0,
-        duration: 1.2,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: sectionRef.current,
+          trigger: el,
           start: "top 80%",
-          toggleActions: "play none none reverse",
         },
       }
     );
   }, []);
 
-  const standardStyle =
-    "bg-gradient-to-br from-[#0F1D17]/60 to-[#1A342A]/30 backdrop-blur-xl border border-green-500/10 shadow-[0_0_20px_#1DB37C]/20 rounded-[25px] p-8 text-white w-full md:w-[480px] hover:scale-[1.05] hover:shadow-[0_0_50px_#1DB37C] transition-all duration-500 group";
+  const standardFeatures = [
+    "Attending First Two Days",
+    "Lunch: Open Buffet & Coffee Break",
+    "Sessions and Workshops",
+    "Notarized Certificate",
+    "Transportation",
+    "Accommodation: +90/night (double) or +80/night (single)",
+  ];
 
-  const vipStyle =
-    "bg-gradient-to-br from-yellow-800/40 to-yellow-600/20 backdrop-blur-xl border border-yellow-400/30 shadow-[0_0_30px_gold]/40 rounded-[30px] p-8 text-white w-full md:w-[480px] hover:scale-[1.05] hover:shadow-[0_0_60px_gold] transition-all duration-500 group";
+  const vipFeatures = [
+    "VIP Sessions & Exclusive Workshops",
+    "Full 3-Day Access",
+    "Gala Dinner & Field Trip",
+    "Private Lunch Area",
+    "Accommodation: +90/night (double) or +80/night (single)",
+  ];
 
-  const buttonStyle =
-    "mt-6 inline-block px-6 py-3 text-lg font-bold rounded-xl bg-gradient-to-r from-[#BE1E2D] to-[#196B40] text-white hover:brightness-110 shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300";
+  const TicketCard = ({
+    title,
+    price,
+    features,
+    icon,
+    bg,
+    border,
+    isIeee,
+    badgeColor,
+    link
+  }) => (
+    <div
+      className={`ticket flex flex-col h-full rounded-3xl p-6 md:p-8 w-full max-w-sm shadow-2xl backdrop-blur-md ${bg} ${border} relative overflow-hidden transition-all duration-300 hover:scale-[1.02]`}
+    >
+      {/* Badge Icon */}
+      <div className="absolute top-4 right-4 text-white text-2xl opacity-20">
+        {icon}
+      </div>
 
-  const Feature = ({ text }) => (
-    <li className="flex items-start gap-2">
-      <FaCheckCircle className="text-green-400 mt-1" />
-      <span>{text}</span>
-    </li>
+      {/* Header */}
+      <div className="mb-4">
+        <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
+        {isIeee && (
+          <p
+            className={`text-sm font-medium mb-2 text-[${badgeColor}] flex items-center gap-2`}
+          >
+            <FaUserGraduate />
+            IEEE Member Discount Applied
+          </p>
+        )}
+      </div>
+
+      {/* Features */}
+      <ul className="text-white space-y-2 mb-6 flex-1">
+        {features.map((feature, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <FaCheck className="text-green-400 mt-1" />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* Footer (Price + Button) */}
+      <div className="pt-4 mt-auto">
+        <p className="text-lg font-semibold text-white text-center mb-2">
+          {price} <span className="text-sm text-gray-300">JOD</span>
+        </p>
+        {!isIeee && (
+          <p className="text-xs text-center text-[#b99128] mb-2">
+            IEEE Members get 10 JOD discount
+          </p>
+        )}
+        <Link href={link}>
+          <button className="w-full cursor-pointer py-3 px-6 rounded-xl bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:scale-105 transition-transform">
+            Buy Now
+          </button>
+        </Link>
+      </div>
+    </div>
   );
 
   return (
-    <section id="TICKETS"
+    <section
+      id="TICKETS"
       ref={sectionRef}
-      className="min-h-screen py-24 px-6 md:px-20 bg-gradient-to-br from-black via-gray-900 to-gray-800 flex flex-col items-center justify-center gap-16"
+      className="py-24 bg-gradient-to-b overflow-hidden z-50 mx-10 from-gray-900 to-gray-950rounded-3xl text-white flex flex-col items-center"
     >
-      <h2 className="text-white text-4xl md:text-5xl font-bold text-center mb-8">
-        Get Your Ticket 🎟️
-      </h2>
+      <h1 className="text-5xl font-extrabold mb-16 text-center">
+        🎟️ Choose Your Ticket
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-12">
+        <TicketCard
+          title="STANDARD Ticket"
+          price={50}
+          features={standardFeatures}
+          icon={<FaCheck />}
+          bg="bg-[#1a1a1a]"
+          border="border border-white/10"
+          isIeee={false}
+          badgeColor="#b99128"
+          link=""
+        />
+        <TicketCard
+          title="STANDARD Ticket (IEEE)"
+          price={40}
+          features={standardFeatures}
+          icon={<FaCheck />}
+          bg="bg-[#1a1a1a]"
+          border="border border-green-500"
+          isIeee={true}
+          badgeColor="#00ffcc"
+          link=""
 
-      <div className="flex flex-col md:flex-row gap-10 w-full justify-center items-center">
-        {/* STANDARD Ticket */}
-        <div className={standardStyle}>
-          <h3 className="text-5xl font-bold mb-4 text-[#1DB37C]">STANDARD</h3>
-          <ul className="space-y-2 text-sm md:text-base">
-            <Feature text="Attending First Two Days" />
-            <Feature text="Lunch: open buffet and Coffee Break" />
-            <Feature text="Sessions and Workshops" />
-            <Feature text="Notarized Certificate" />
-            <Feature text="Transportation" />
-            <Feature text="Accommodation: +90/night (double) or +80/night (single)" />
-          </ul>
-          <p className="mt-6 text-xl font-bold text-green-400">Price: 60 JOD</p>
-          <p className="text-sm text-yellow-400 mt-1">
-            IEEE Members get 10 JOD discount!
-          </p>
-          <button className={buttonStyle}>Buy Now</button>
-        </div>
+        />
+        <TicketCard
+          title="VIP Ticket"
+          price={100}
+          features={vipFeatures}
+          icon={<FaCrown />}
+          bg="bg-gradient-to-br from-[#40320c] to-[#2e2305]"
+          border="border border-[#b99128]"
+          isIeee={false}
+          badgeColor="#b99128"
+          link=""
 
-        {/* VIP Ticket */}
-        <div className={vipStyle}>
-          <h3 className="text-5xl font-bold mb-4 text-yellow-400">VIP</h3>
-          <ul className="space-y-2 text-sm md:text-base">
-            <Feature text="VIP Sessions with exclusive workshops & speaker interaction" />
-            <Feature text="Full 3-Day Access" />
-            <Feature text="Gala Dinner & Field Trip" />
-            <Feature text="Private Lunch Area" />
-            <Feature text="Accommodation: +90/night (double) or +80/night (single)" />
-          </ul>
-          <p className="mt-6 text-xl font-bold text-yellow-300">Price: 90 JOD</p>
-          <p className="text-sm text-yellow-200 mt-1">
-            IEEE Members get 10 JOD discount!
-          </p>
-          <button className={buttonStyle}>Buy Now</button>
-        </div>
+        />
+        <TicketCard
+          title="VIP Ticket (IEEE)"
+          price={90}
+          features={vipFeatures}
+          icon={<FaCrown />}
+          bg="bg-gradient-to-br from-[#40320c] to-[#2e2305]"
+          border="border border-green-500"
+          isIeee={true}
+          badgeColor="#00ffcc"
+          link=""
+
+        />
       </div>
     </section>
   );

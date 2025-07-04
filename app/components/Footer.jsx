@@ -1,53 +1,56 @@
-import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
+"use client";
+
+import { Instagram, Linkedin, Mail , Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-[#0f172a] text-white py-10 mt-32 relative z-10 border-t border-[#196B40]/30">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-        {/* شعار MedRoots */}
-        <div>
-          <h1 className="text-3xl font-bold text-[#BE1E2D] tracking-wide">
-            <span className="text-[#196B40]">Med</span>Roots<sub>25</sub>
-          </h1>
-          <p className="text-gray-400 mt-4 text-sm">
-            Igniting innovation in technology, healthcare, and sustainability.
-          </p>
-        </div>
+    <footer id="footer" className="flex flex-col items-center gap-4 bg-[#121212] py-6 px-12 max-md:px-6 text-white">
+      <div className="flex gap-4 text-[#9CA3AF] text-[14px] max-md:text-[12px]">
+        <a
+          href="https://www.instagram.com/medroots25?igsh=YmtwZWZhc3c0bjQ="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram MedRoots 25"
+          className="hover:text-[#BE1E2D] transition-transform hover:scale-110 duration-300"
+        >
+          <Instagram size={20} />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/medroots25/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn MedRoots 25"
+          className="hover:text-[#BE1E2D] transition-transform hover:scale-110 duration-300"
+        >
+          <Linkedin size={20} />
+        </a>
 
-        {/* روابط الأقسام */}
-        <div className="flex flex-col space-y-3 md:items-center">
-          <h2 className="text-lg font-semibold text-[#00ffcc] mb-2">Explore</h2>
-          <a href="#story" className="text-gray-300 hover:text-white transition">About</a>
-          <a href="#agenda" className="text-gray-300 hover:text-white transition">Schedule</a>
-          <a href="#TICKETS" className="text-gray-300 hover:text-white transition">Tickets</a>
-          <a href="#faq" className="text-gray-300 hover:text-white transition">FAQ</a>
-
-        </div>
-
-        {/* سوشال ميديا */}
-        <div className="flex flex-col items-start md:items-end space-y-4">
-          <h2 className="text-lg font-semibold text-[#00ffcc]">Follow Us</h2>
-          <div className="flex gap-4">
-            <a href="https://www.instagram.com/medroots25?igsh=YmtwZWZhc3c0bjQ=" target="_blank" className="hover:text-[#BE1E2D] transition">
-              <Instagram size={20} />
-            </a>
-            <a href="https://www.linkedin.com/company/medroots-summit-2025/" target="_blank" className="hover:text-[#196B40] transition">
-              <Linkedin size={20} />
-            </a>
-            <a href="https://web.facebook.com/people/MedRoots-Summit-2025/61572288527534/?mibextid=wwXIfr&rdid=CBMJu7QqZa2NyEvm&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F15JdjNpTb8%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr" target="_blank" className="hover:text-blue-500 transition">
-              <Facebook size={20} />
-            </a>
+        <a
+          href="https://www.facebook.com/MedRoots25"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook MedRoots 25"
+          className="hover:text-[#BE1E2D] transition-transform hover:scale-110 duration-300"
+        >
+          <Facebook size={20} />
+        </a>
+                  
             <a href="mailto:medroots25@gmail.com" className="hover:text-[#00ffcc] transition">
               <Mail size={20} />
             </a>
-          </div>
-        </div>
       </div>
 
-      {/* الخط السفلي */}
-      <div className="mt-10 text-center text-gray-500 text-sm border-t border-[#196B40]/20 pt-5">
-        © 2025 MedRoots Summit. All rights reserved.
-      </div>
+      <p className="text-[14px] max-md:text-[12px] text-[#9CA3AF]">
+        © 2025 MedRoots 25. All rights reserved.
+      </p>
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Back to top"
+        className="text-[#9CA3AF] hover:text-[#BE1E2D] transition-colors duration-300 text-sm underline"
+      >
+        Back to top
+      </button>
     </footer>
   );
 }

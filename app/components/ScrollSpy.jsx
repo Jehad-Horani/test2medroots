@@ -30,7 +30,7 @@ export default function ScrollSpy() {
     }, []);
 
     return (
-        <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-6">
+        <div className="fixed top-1/4 left-6 z-50 flex flex-col items-center space-y-6 max-md:hidden">
             {sections.map((sec, i) => (
                 <div key={sec.id} className="flex flex-col items-center">
                     {/* الدائرة + الاسم */}
