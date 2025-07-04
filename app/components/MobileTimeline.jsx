@@ -67,7 +67,7 @@ export default function MobileTimeline() {
         <section id="agenda" className="md:hidden bg-gray-900 text-white py-10">
             <h1
                 style={{ fontFamily: "'Interceptor', sans-serif" }}
-                className="text-7xl max-md:text-6xl px-10 pt-10 max-md:m-2 pb-12 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4 text-center"
+                className="flex flex-wrap justify-center items-center text-7xl max-md:text-6xl px-10 pt-10 max-md:m-2 pb-12 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4 text-center"
             >
                 Conference Agenda
             </h1>
