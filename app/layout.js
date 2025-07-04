@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
         <AOSInitializer />
 
         {children}
+        <Analytics />
       </body>
     </html>
   );
