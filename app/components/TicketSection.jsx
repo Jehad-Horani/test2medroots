@@ -94,11 +94,7 @@ export default function TicketSection() {
         <p className="text-lg font-semibold text-white text-center mb-2">
           {price} <span className="text-sm text-gray-300">JOD</span>
         </p>
-        {!isIeee && (
-          <p className="text-xs text-center text-[#b99128] mb-2">
-            IEEE Members get 10 JOD discount
-          </p>
-        )}
+
         <Link href={link}>
           <button className="w-full cursor-pointer py-3 px-6 rounded-xl bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:scale-105 transition-transform">
             Buy Now
@@ -120,7 +116,7 @@ export default function TicketSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-12">
         <TicketCard
           title="STANDARD Ticket"
-          price={50}
+          price={45}
           features={standardFeatures}
           icon={<FaCheck />}
           bg="bg-[#1a1a1a]"
@@ -131,7 +127,7 @@ export default function TicketSection() {
         />
         <TicketCard
           title="STANDARD Ticket (IEEE)"
-          price={40}
+          price={35}
           features={standardFeatures}
           icon={<FaCheck />}
           bg="bg-[#1a1a1a]"
@@ -143,7 +139,7 @@ export default function TicketSection() {
         />
         <TicketCard
           title="VIP Ticket"
-          price={100}
+          price={95}
           features={vipFeatures}
           icon={<FaCrown />}
           bg="bg-gradient-to-br from-[#40320c] to-[#2e2305]"
@@ -155,7 +151,7 @@ export default function TicketSection() {
         />
         <TicketCard
           title="VIP Ticket (IEEE)"
-          price={90}
+          price={75}
           features={vipFeatures}
           icon={<FaCrown />}
           bg="bg-gradient-to-br from-[#40320c] to-[#2e2305]"
