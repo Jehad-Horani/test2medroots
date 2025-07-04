@@ -35,7 +35,7 @@ export default function Footer() {
           <Facebook size={20} />
         </a>
                   
-            <a href="mailto:medroots25@gmail.com" className="hover:text-[#00ffcc] transition">
+            <a href="mailto:medroots25@gmail.com" className="hover:text-[#BE1E2D] transition-transform hover:scale-110 duration-300">
               <Mail size={20} />
             </a>
       </div>
