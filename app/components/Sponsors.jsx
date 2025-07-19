@@ -59,7 +59,7 @@ export default function SponsorsSection() {
             </p>
 
             {/* Strategic + Platinum Side by Side */}
-            <div className="flex flex-col lg:flex-row justify-center items-start gap-12 mb-20">
+            <div className="flex flex-col lg:flex-row justify-around items-center gap-12 mb-20">
                 {/* Strategic Partner */}
                 <div className="flex-1 text-center">
                     <h3 className="text-5xl max-md:text-3xl font-bold text-white mb-6">Strategic Partner</h3>
