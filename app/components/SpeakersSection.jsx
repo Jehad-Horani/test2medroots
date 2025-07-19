@@ -98,7 +98,7 @@ export default function SpeakersSection() {
       {/* Keynote Section */}
       <div className="mb-20">
         <h3 className="text-4xl font-bold mb-10 text-white underline underline-offset-8 decoration-[#196B40]">
-          Keynote Speeches
+          Keynote Speakers
         </h3>
         <div className="flex flex-wrap justify-center gap-12">
           {keynoteSpeakers.map((spk, index) => (
@@ -110,7 +110,7 @@ export default function SpeakersSection() {
       {/* Panel Discussion Section */}
       <div>
         <h3 className="text-4xl font-bold mb-10 text-white underline underline-offset-8 decoration-[#BE1E2D]">
-          Panel Discussions
+          Panel Discussion Speakers
         </h3>
         <div className="flex flex-wrap justify-center gap-12">
           {panelSpeakers.map((spk, index) => (
