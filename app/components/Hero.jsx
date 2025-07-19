@@ -18,7 +18,7 @@ export default function Herosec() {
     });
 
     useEffect(() => {
-        const countdownDate = new Date("September 14, 2025 00:00:00").getTime();
+        const countdownDate = new Date("September 13, 2025 00:00:00").getTime();
 
         const interval = setInterval(() => {
             const now = new Date().getTime();
@@ -129,7 +129,7 @@ export default function Herosec() {
                     </svg>
 
                     <p className="text-white text-xl ml-2 inline-block font-bold">
-                        September 14 - 15, 2025
+                        September 13 - 14, 2025
                     </p>
                 </div>
 

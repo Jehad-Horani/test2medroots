@@ -5,7 +5,7 @@ import { FiChevronDown } from "react-icons/fi"; // أيقونة السهم
 
 const days = [
     {
-        title: "Day 1 — Sun, 14th Sep.",
+        title: "Day 1 — Sat, 13th Sep.",
         events: [
             { time: "9:00 am - 10:00 am", title: "Registration & Check-in" },
             { time: "10:00 am - 11:00 am", title: "Opening Ceremony" },
@@ -22,7 +22,7 @@ const days = [
         titleGradient: "from-[#BE1E2D] via-white to-[#196B40]",
     },
     {
-        title: "Day 2 — Mon, 15th Sep.",
+        title: "Day 2 — Sun, 14th Sep.",
         events: [
             { time: "9:00 am - 10:00 am", title: "Workshop 3" },
             { time: "10:00 am - 10:30 am", title: "Coffee Break" },
