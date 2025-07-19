@@ -8,24 +8,24 @@ const trackData = {
   A: {
     workshop: {
       company: "Comming Soon",
-      logo: "/speakers/Q.png",
+      logo: "/speakers/Q (2).png",
       title: "Smart Surgical Tools: A Hands-On Experience",
     },
     session: {
       speaker: "Comming Soon",
-      image: "/speakers/Q.png",
+      image: "/speakers/Q (2).png",
       title: "Redesigning Emergency Rooms with AI",
     },
   },
   B: {
     workshop: {
       company: "Comming Soon",
-      logo: "/speakers/Q.png",
+      logo: "/speakers/Q (2).png",
       title: "Predictive Health Analytics in Action",
     },
     session: {
       speaker: "Comming Soon",
-      image: "/speakers/Q.png",
+      image: "/speakers/Q (2).png",
       title: "From Code to Care: The Role of Engineers in Medicine",
     },
   },

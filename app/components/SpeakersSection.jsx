@@ -8,56 +8,56 @@ const speakers = [
     role: "Keynote Speaker",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Keynote Speech",
     role: "Keynote Speaker",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Keynote Speech",
     role: "Keynote Speaker",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Panel Discussion",
     role: "Panelist",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Panel Discussion",
     role: "Panelist",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Panel Discussion",
     role: "Panelist",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Panel Discussion",
     role: "Panelist",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   },
   {
     type: "Panel Discussion",
     role: "Panelist",
     name: "Comming Soon",
     specialization: "Specialization",
-    image: "/speakers/Q.png"
+    image: "/speakers/Q (2).png"
   }
 ];
 
