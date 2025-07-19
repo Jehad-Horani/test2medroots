@@ -12,7 +12,7 @@ import TopicsSection from "./components/TopicsSection";
 import CombinedTimeline from "./components/CombinedTimelinesec";
 import MobileTimeline from "./components/MobileTimeline";
 import SponsorsSection from "./components/Sponsors";
-import SparkTeamsSection from "./components/teams";
+import SparkTeamsSection from "./components/Teams";
 
 
 
