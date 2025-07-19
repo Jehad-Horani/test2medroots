@@ -87,7 +87,7 @@ export default function CombinedTimeline() {
         ease: "none",
         scrollTrigger: {
           trigger: container,
-          start: "top top",
+          start: "top",
           end: () => `+=${timelineWidth}`,
           scrub: true,
           pin: true,

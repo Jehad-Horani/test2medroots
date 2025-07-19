@@ -11,6 +11,8 @@ import SpeakersSection from "./components/SpeakersSection";
 import TopicsSection from "./components/TopicsSection";
 import CombinedTimeline from "./components/CombinedTimelinesec";
 import MobileTimeline from "./components/MobileTimeline";
+import SponsorsSection from "./components/Sponsors";
+import SparkTeamsSection from "./components/teams";
 
 
 
@@ -33,6 +35,8 @@ export default function Home() {
 </>
 <TopicsSection/>
 <TicketSection/>
+<SponsorsSection/>
+<SparkTeamsSection/>
 <FAQSection />
 <Footer/>
 
