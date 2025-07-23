@@ -64,7 +64,7 @@ export default function Herosec() {
           
            
             <div className="flex justify-center items-center gap-20 px-4 py-18 ">
-                <h1 className={`${styles.medroots}  text-5xl text-shadow-lg/300 ml-88 max-md:hidden mt-56 whitespace-nowrap`}
+                <h1 className={`${styles.medroots}  text-5xl text-shadow-lg/300 ml-88 max-md:hidden mt-56 whitespace-nowrap text-white`}
                     style={{
                         textShadow: "3px 3px 3px red",
                     }}>
@@ -82,7 +82,7 @@ export default function Herosec() {
                     }}
                 />
 
-                <h1 className={`${styles.summit}  text-5xl mr-80  max-md:hidden  mt-56 whitespace-nowrap`}
+                <h1 className={`${styles.summit}  text-5xl mr-80  max-md:hidden text-white mt-56 whitespace-nowrap`}
                     style={{
                         textShadow: "3px 3px 3px green",
                     }}>
@@ -91,7 +91,7 @@ export default function Herosec() {
             </div>
  <div className="flex justify-center items-center ">
 
-            <h1 className="text-5xl pt-7 pb-3 text-center font-bold ">Conference Day</h1>
+            <h1 className="text-5xl pt-7 pb-3 text-center font-bold text-white">Conference Day</h1>
 </div>
 
             <div className="flex transform-3d justify-around flex-wrap-reverse max-lg:gap-20 items-center pt-10 pb-6">

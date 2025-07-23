@@ -141,7 +141,7 @@ export default function StorySec() {
                     </div>
 
                     <div className={styles.copy}>
-                        <div className={`${styles.line} max-md:text-5xl pb-7`}><p>The revolution begins now</p></div>
+                        <div className={`${styles.line} max-md:text-5xl pb-7 text-white`}><p>The revolution begins now</p></div>
 
                     </div>
                 </div>
