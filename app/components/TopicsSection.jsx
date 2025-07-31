@@ -9,24 +9,24 @@ const trackData = {
     workshop: {
       company: "Comming Soon",
       logo: "/speakers/Q (2).png",
-      title: "Smart Surgical Tools: A Hands-On Experience",
+      title: "AI Diagnostics/Surgical Robots/IoT",
     },
     session: {
       speaker: "Comming Soon",
       image: "/speakers/Q (2).png",
-      title: "Redesigning Emergency Rooms with AI",
+      title: "The Smart Hospital: Where AI, Robotics, and IoT Redefine Healthcare",
     },
   },
   B: {
     workshop: {
       company: "Comming Soon",
       logo: "/speakers/Q (2).png",
-      title: "Predictive Health Analytics in Action",
+      title: "Prosthetics for Low-Resource Areas",
     },
     session: {
       speaker: "Comming Soon",
       image: "/speakers/Q (2).png",
-      title: "From Code to Care: The Role of Engineers in Medicine",
+      title: "Bioprinting Breakthroughs: Printing the Future of Regenerative Medicine",
     },
   },
 };
@@ -58,6 +58,7 @@ export default function TracksSection() {
           className="space-y-12"
         >
           <h1 className="text-4xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00bcd4] via-white to-[#e76f51] drop-shadow-lg">Track A</h1>
+          <h1 className="text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00bcd4] via-white to-[#e76f51] drop-shadow-lg">Cyber-Physical Healthcare</h1>
           <TrackCard type="Workshop" data={trackData.A.workshop} />
           <TrackCard type="Session" data={trackData.A.session} />
         </motion.div>
@@ -79,6 +80,7 @@ export default function TracksSection() {
           className="space-y-12"
         >
                     <h1 className="text-4xl text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00bcd4] via-white to-[#e76f51] drop-shadow-lg">Track B</h1>
+          <h1 className="text-md text-center bg-clip-text text-transparent bg-gradient-to-r from-[#00bcd4] via-white to-[#e76f51] drop-shadow-lg">Bioprinting & Assistive Technologies</h1>
 
           <TrackCard type="Session" data={trackData.B.session} />
           <TrackCard type="Workshop" data={trackData.B.workshop} />

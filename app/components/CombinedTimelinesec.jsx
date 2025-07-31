@@ -13,13 +13,13 @@ const days = [
       { time: "9:00 am - 10:00 am", title: "Registration & Check-in" },
       { time: "10:00 am - 11:00 am", title: "Opening Ceremony" },
       { time: "11:00 am - 11:30 am", title: "Coffee Break" },
-      { time: "11:30 am - 1:00 pm", title: "Keynote Speech 1" },
-      { time: "1:00 pm - 2:00 pm", title: "Workshop 1" },
-      { time: "2:00 pm - 3:00 pm", title: "Lunch" },
-      { time: "3:00 pm - 4:00 pm", title: "Workshop 2" },
-      { time: "4:00 pm - 4:30 pm", title: "Coffee Break" },
-      { time: "4:30 pm - 5:30 pm", title: "VIP Workshop 1" },
-      { time: "4:30 pm - 7:00 pm", title: "Expo & Gallery" },
+      { time: "11:30 am - 12:30 pm", title: "Keynote Speech (1)" },
+      { time: "12:30 pm - 1:15 pm", title: "Workshop 1" },
+      { time: "1:15 pm - 2:15 pm", title: "Lunch" },
+      { time: "2:15 pm - 3:00 pm", title: "Workshop 2" },
+      { time: "3:00 pm - 3:30 pm", title: "Coffee Break" },
+      { time: "3:30 pm - 5:30 pm", title: "VIP Workshop 1" },
+      { time: "3:30 pm - 6:00 pm", title: "Expo & Gallery" },
     ],
     lineWidth: 3400,
     lineColor: "#196B40",         // أخضر داكن
@@ -29,19 +29,19 @@ const days = [
   {
     title: "Day 2 — Sun, 14th Sep.",
     events: [
-      { time: "9:00 am - 10:00 am", title: "Workshop 3" },
+      { time: "9:00 am - 10:00 am", title: "Keynote speech (2)" },
       { time: "10:00 am - 10:30 am", title: "Coffee Break" },
-      { time: "10:30 am - 12:00 pm", title: "Keynote speech 2" },
-      { time: "12:00 pm - 1:30 pm", title: "Panel Discussion" },
-      { time: "1:30 pm - 2:30 pm", title: "Lunch" },
-      { time: "2:30 pm - 4:00 pm", title: "Competition" },
-      { time: "4:00 pm - 5:00 pm", title: "VIP Workshop 2" },
-      { time: "4:00 pm - 5:00 pm", title: "Competition Expo" },
-      { time: "5:00 pm - 5:30 pm", title: "Coffee Break" },
-      { time: "5:30 pm - 6:30 pm", title: "Closing Ceremony" },
+      { time: "10:30 am - 11:30 pm", title: "Keynote speech (3)" },
+      { time: "11:30 pm - 12:15 pm", title: "Panel Discussion" },
+      { time: "12:15 pm - 1:15 pm", title: "Lunch" },
+      { time: "1:15 pm - 2:45 pm", title: "Competition" },
+      { time: "2:45 pm - 3:30 pm", title: "VIP Workshop 2" },
+      { time: "2:45 pm - 3:30 pm", title: "Competition Expo" },
+      { time: "3:30 pm - 4:00 pm", title: "Coffee Break" },
+      { time: "4:00 pm - 5:00 pm", title: "Closing Ceremony" },
       { time: "8:30 pm - 11:30 pm", title: "Gala Dinner" },
     ],
-    lineWidth: 3700,
+    lineWidth: 3800,
     lineColor: "#196B40",         // أخضر داكن
     pointColor: "#BE1E2D",        // أحمر للنقاط
     titleGradient: "from-[#BE1E2D] via-white to-[#196B40]",
@@ -110,7 +110,7 @@ export default function CombinedTimeline() {
               end: "top 65%",
               toggleActions: "play none none reverse",
             },
-           stagger: true,
+            stagger: true,
           }
         );
       });
@@ -124,7 +124,7 @@ export default function CombinedTimeline() {
 
   return (
     <section id="agenda" className="bg-gray-900 max-md:hidden text-white overflow-hidden">
-                   <h1
+      <h1
         style={{ fontFamily: "'Interceptor', sans-serif" }}
         className="text-7xl max-md:text-6xl max-md:m-2 px-10 pt-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4 text-center"
       >
@@ -138,15 +138,15 @@ export default function CombinedTimeline() {
           style={{
             fontFamily: "'Interceptor', sans-serif",
             background:
-           "radial-gradient(ellipse at center, #111827 0%, #0f172a 100%)",
+              "radial-gradient(ellipse at center, #111827 0%, #0f172a 100%)",
           }}
         >
-                  <h1
-        style={{ fontFamily: "'Interceptor', sans-serif" }}
-        className="text-7xl max-md:text-6xl max-md:m-2 pb-12 px-10 pt-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4 text-center"
-      >
-     
-      </h1>
+          <h1
+            style={{ fontFamily: "'Interceptor', sans-serif" }}
+            className="text-7xl max-md:text-6xl max-md:m-2 pb-12 px-10 pt-5 font-black text-transparent bg-clip-text bg-gradient-to-r from-[#BE1E2D] via-white to-[#196B40] tracking-wider mb-4 text-center"
+          >
+
+          </h1>
           <h2
             className={`text-6xl max-md:text-5xl font-bold mb-16 pt-32 bg-clip-text text-transparent drop-shadow-lg bg-gradient-to-r ${day.titleGradient}`}
           >

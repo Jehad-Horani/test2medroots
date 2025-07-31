@@ -36,7 +36,6 @@ export default function TicketSection() {
     "Sessions and Workshops",
     "Notarized Certificate",
     "Transportation",
-    "Accommodation: +90/night (double) or +80/night (single)",
   ];
 
   const vipFeatures = [
@@ -44,7 +43,6 @@ export default function TicketSection() {
     "Full 3-Day Access",
     "Gala Dinner & Field Trip",
     "Private Lunch Area",
-    "Accommodation: +90/night (double) or +80/night (single)",
   ];
 
   const TicketCard = ({
@@ -95,10 +93,11 @@ export default function TicketSection() {
           {price} <span className="text-sm text-gray-300">JOD</span>
         </p>
 
-       
+       <Link href={link}>
           <button className="w-full cursor-pointer py-3 px-6 rounded-xl bg-gradient-to-r from-green-500 to-green-700 text-white font-bold hover:scale-105 transition-transform">
             Buy Now
           </button>
+       </Link>
        
       </div>
     </div>
@@ -124,7 +123,7 @@ export default function TicketSection() {
           border="border border-white/10"
           isIeee={false}
           badgeColor="#b99128"
-          link=""
+          link="https://registration-form-with-db.vercel.app/register/non-member"
         />
         <TicketCard
           title="STANDARD Ticket (IEEE)"
@@ -135,7 +134,7 @@ export default function TicketSection() {
           border="border border-green-500"
           isIeee={true}
           badgeColor="#00ffcc"
-          link=""
+          link="https://registration-form-with-db.vercel.app/register/ieee"
 
         />
         <TicketCard
@@ -147,7 +146,7 @@ export default function TicketSection() {
           border="border border-[#b99128]"
           isIeee={false}
           badgeColor="#b99128"
-          link=""
+          link="https://registration-form-with-db.vercel.app/register/non-member"
 
         />
         <TicketCard
@@ -159,7 +158,7 @@ export default function TicketSection() {
           border="border border-green-500"
           isIeee={true}
           badgeColor="#00ffcc"
-          link=""
+          link="https://registration-form-with-db.vercel.app/register/ieee"
 
         />
       </div>

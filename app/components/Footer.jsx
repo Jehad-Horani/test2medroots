@@ -41,8 +41,8 @@ export default function Footer() {
       </div>
 
       <p className="text-[14px] max-md:text-[12px] text-[#9CA3AF]">
-        © 2025 MedRoots 25. All rights reserved.
-      </p>
+        © {new Date().getFullYear()} JHWebDev. All rights reserved.
+         </p>
 
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
