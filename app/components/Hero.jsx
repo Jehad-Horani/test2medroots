@@ -201,7 +201,7 @@ export default function Herosec() {
                         </svg>
 
                         <a
-                            href="https://www.google.com/maps/place/Four+Seasons+Hotel+Amman/@31.9616282,35.8810368,1478m/data=!3m2!1e3!4b1!4m9!3m8!1s0x151ca05772da5d9d:0x80a84e21ae4f7d59!5m2!4m1!1i2!8m2!3d31.9616282!4d35.8810368!16s%2Fg%2F11b6_cgfrf?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
+                            href="https://www.google.com/maps/place/Signia+by+Hilton+Amman/@31.9685662,35.8951667,739m/data=!3m2!1e3!4b1!4m9!3m8!1s0x151ca069610429c9:0xaaf5fbe6585b4afb!5m2!4m1!1i2!8m2!3d31.9685662!4d35.8977416!16s%2Fg%2F1tfy51c4?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white text-xl ml-2 inline-block hover:text-red-300 transition font-bold"

@@ -112,7 +112,6 @@ export default function TicketSection() {
       <h1 className="text-5xl font-extrabold mb-16 text-center">
         🎟️ Choose Your Ticket
       </h1>
-      <h1 className="text-6xl font-extrabold mb-16 text-center text-gray-500">we will open them soon</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-12">
         <TicketCard
           title="STANDARD Ticket"
