@@ -206,7 +206,7 @@ export default function Herosec() {
                             rel="noopener noreferrer"
                             className="text-white text-xl ml-2 inline-block hover:text-red-300 transition font-bold"
                         >
-                           Sygnia by Hilton Amman
+                           Signia by Hilton Amman
                         </a>
                     </div>
                 </div>
