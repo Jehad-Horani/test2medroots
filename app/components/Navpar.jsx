@@ -20,9 +20,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-xs shadow-2xl rounded-b-3xl  py-3 mx-0.5">
-      <nav className="max-w-screen-xl mx-auto flex items-center justify-between h-16 px-4">
+      <nav className="max-w-screen-xl mx-auto flex items-center justify-around h-16 px-4">
         {/* Logo */}
-        <Link href="#home">
+        <Link href="/">
           <Image
             src="/logo-w.webp"
             alt="MEDROOTS Logo"
@@ -32,6 +32,17 @@ export default function Navbar() {
             data-aos="zoom-in"
           />
         </Link>
+         <Link href="/">
+          <Image
+            src="/SIGHT_LOGO.svg"
+            alt="IEEE SIGHT Logo"
+            width={100}
+            height={40}
+            className="object-contain rounded-full"
+            data-aos="zoom-in"
+          />
+        </Link>
+
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 text-white text-sm font-semibold tracking-wide">

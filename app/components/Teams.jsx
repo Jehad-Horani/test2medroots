@@ -43,9 +43,9 @@ const teams = [
   },
   {
     id: 7,
-    teamName: "Biopulse Engineers",
-    logo: "/teams/Biopulse.png",
-    brief: "Disease detection from ECG signal using machine learning techniques"
+    teamName: "EEG-ASD",
+    logo: "/teams/EEG-ASD.jpg",
+    brief: "Functional & Spectral Analysis of EEG Signals in Children for Early Autism Detection Using Deep Learning,” analyzes EEG data from children under 12 to identify Autism Spectrum Disorder"
   },
   {
     id: 8,
