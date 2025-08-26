@@ -7,102 +7,37 @@ import Image from "next/image";
 const teams = [
   {
     id: 1,
-    teamName: "Biliary Bytes",
-    logo: "/teams/Biliary Bytes.png",
-    brief: "AI system predicts invasions in hepatobiliary cancers using clinical, demographic, and genetic data, aiding doctors in treatment decisions."
-  },
-  {
-    id: 2,
     teamName: "HelixIQ",
     logo: "/teams/HelixIQ.jpg",
     brief: "Personalized Medicine using artificial intelligence to tailor medicaltreatments to an individual’s genetic makeup, lifestyle, and healthdata for improved outcomes."
   },
   {
-    id: 3,
-    teamName: "NeuroPulse",
-    logo: "/teams/NeuroPuls Team.png",
-    brief: "An electronic system aimed at creating harmony between current technological advancements and the field of psychiatry."
-  },
-  {
-    id: 4,
-    teamName: "Quantara",
-    logo: "/teams/Quantara.png",
-    brief: "A wearable device that alerts back pain patients to incorrect posture using motion sensors and vibration"
-  },
-  {
-    id: 5,
+    id: 2,
     teamName: "Triple E",
     logo: "/teams/Triple E.jpg",
     brief: "smart drone system for urban emergencies, using thermal imaging, CO₂ sensors, and UWB radar to detect humans in disaster zones."
   },
   {
-    id: 6,
-    teamName: "Auto mind",
-    logo: "/teams/auto mind logo.jpg",
-    brief: "An interactive AI agent that helps manage the user's physical and mental health through smart conversations and health data analysis."
-  },
-  {
-    id: 7,
-    teamName: "EEG-ASD",
-    logo: "/teams/EEG-ASD.jpg",
-    brief: "Functional & Spectral Analysis of EEG Signals in Children for Early Autism Detection Using Deep Learning,” analyzes EEG data from children under 12 to identify Autism Spectrum Disorder"
-  },
-  {
-    id: 8,
+    id: 3,
     teamName: "AUTISCAN",
     logo: "/teams/AUTISCAN.png",
     brief: "A system designed to assist in the early detection of Autism Spectrum Disorder using behavioral and developmental data."
   },
+
   {
-    id: 9,
-    teamName: "Smart Tashkhees",
-    logo: "/teams/Smart Tashkhes.png",
-    brief: "A smart system using machine learning to assess chronic disease risk from lifestyle data, with personalized tips and interactive tracking."
-  },
-  {
-    id: 10,
+    id: 4,
     teamName: "MediTrack",
     logo: "/teams/MediTrack .png",
     brief: "sustainable healthcare solutions in low-income regions. aim to simplify and enhance the maintenance management of medical equipment."
   },
   {
-    id: 11,
+    id: 5,
     teamName: "Snobar",
     logo: "/teams/Snobar team1.png",
     brief: "AI platform that replaces toxic paper receipts with safe digital ones, protecting health and reducing paper waste while promoting transparent spending and sustainability."
-  }, 
-  {
-    id: 12,
-    teamName: "tmp",
-    logo: "/teams/tmp.png",
-    brief: "Automated intracranial hemorrhage (ICH) detection in CT scans through deep learning models."
-  }, 
-  {
-    id: 13,
-    teamName: "A-EYE",
-    logo: "/teams/A-Eye .jpg",
-    brief: "A model that classifies 8 eye disease conditions by being trained on a pre-existing medical dataset."
   },
   {
-    id: 14,
-    teamName: "InsightRay",
-    logo: "/teams/TechPulse team -InsightRay.jpeg",
-    brief: "An AI-powered system that diagnoses lung and heart diseases, identifies their causes, and suggests treatment plans with personalized psychological support."
-  },
-  {
-    id: 15,
-    teamName: "Smart Clinic",
-    logo: "/teams/SMART CLINIC..png",
-    brief: "Smart Clinic is an intelligent application that integrates AI with healthcare to monitor heart disease, blood pressure, and diabetes, providing early alerts and diagnostics to improve patients’ quality of life."
-  },
-  {
-    id: 16,
-    teamName: "Sukoon",
-    logo: "/teams/SukoonLOGO.png",
-    brief: "An AI-powered platform that uses communication technologies to help individuals express their emotions and receive personalized psychological support in a safe, intelligent, and accessible way."
-  },
-  {
-    id: 17,
+    id: 6,
     teamName: "VRSBL",
     logo: "/teams/VRSBL1.png",
     brief: "A device for treating stuttering and speech disfluency in children."
